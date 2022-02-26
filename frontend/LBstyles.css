@@ -10,17 +10,7 @@
   height: 50vh;
 } */
 
-h1 {
-  font-size: 50px !important;
-  background: rgba(0, 0, 0, 0.8);
-  /* display: inline-block; */
-}
 
-h3 {
-  color: rgb(27, 27, 27);
-  font-size: 40px;
-  /* display: inline-block; */
-}
 
 h4 {
   font-family: "Raleway", sans-serif;
