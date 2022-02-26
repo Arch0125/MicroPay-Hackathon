@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MicroPay-Borrower Portal</title>
     <link rel="stylesheet" href="LBstyles.css" />
     <link
       rel="stylesheet"
@@ -14,6 +14,9 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -28,6 +31,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
   <style>
+
+    .header{
+      align-self: center;
+      align-items: center;
+    }
+
     .button {
       background: blueviolet;
       border-radius: 999px;
@@ -59,7 +68,7 @@
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: center;
-      background-color: blueviolet;
+      background-color: rgb(97, 17, 172);
       color: white;
     }
 
@@ -71,113 +80,163 @@
     .table tr:nth-child(even){background-color: #f2f2f2;}
 
     .table tr:hover {background-color: #ddd;}
+
+    .title{
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+    }
+
+
+.get-in-touch {
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+
+}
+.get-in-touch .title {
+  text-align: center;
+  text-transform: uppercase;
+
+  font-size: 3.2em;
+  line-height: 48px;
+  padding-bottom: 48px;
+     color: #5543ca;
+    background: #5543ca;
+    background: -moz-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
+    background: -webkit-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
+    background: linear-gradient(to right,#f4524d  0%,#5543ca  100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+
+.get-in-touch .help{
+  text-align: center;
+  text-transform: uppercase;
+
+  font-size: 18px;
+     color: blueviolet  ;
+    background: blueviolet;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #5543ca;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+}
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #5543ca;
+  cursor: text;
+}
+.contact-form .submit-btn {
+  display: inline-block;
+  background-color: #000;
+   background-image: linear-gradient(125deg,#a72879,#064497);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  width:740px;
+  cursor: pointer;
+}
+
   </style>
   
   </head>
 
   <body>
+    <section class="get-in-touch">
+      <h1 class="title">Welcome to Borrowers' Portal</h1>
+      <hr/>
+      <label class="help" >Here you can ask for ETH providing you repayment date and suitable digital asset as collateral</label>
+      <form class="contact-form row">
+         <div class="form-field col-lg-6">
+              <input
+              type="text"
+              class="form-control"
+              id="acc"
+              placeholder="Account No."
+              aria-label="Account No."
+              aria-describedby="basic-addon1"
+              disabled
+            />
+            <label class="label">Account No.</label>
+         </div>
+         <div class="form-field col-lg-6 ">
+              <input
+              type="text"
+              class="form-control amount"
+              id="loanAmount"
+              aria-label="Loan Amount"
+              aria-describedby="basic-addon1"
+              required
+            />
+            <label class="label">Loan Amount</label>
+         </div>
+         <div class="form-field col-lg-6 ">
+              <input
+              type="date"
+              class="form-control date"
+              id="date"
+              placeholder="Loan Amount"
+              aria-label="Loan Amount"
+              aria-describedby="basic-addon1"
+              required
+            />
+            <label class="label">Repayment Date</label>
+         </div>
+          <div class="form-field col-lg-6 ">
+            <input id="phone" class="input-text js-input" type="text" required>
+            <label class="label" for="phone">Contact Number</label>
+         </div>
+         <div class="form-field col-lg-12">
+              <input
+              type="text"
+              class="form-control"
+              id="mortgage"
+              placeholder="Mortgage Address"
+              aria-label="Loan Amount"
+              aria-describedby="basic-addon1"
+              required
+            />
+            <label class="label" >Mortgage Address</label>
+         </div>
+         <div class="form-field col-lg-12">
+          <button id="submit" type="submit" class="submit-btn">
+            <i class="fas fa-search-dollar"></i> Submit Loan Proposal
+          </button>
+         </div>
+      </form>
+   </section>
     <div class="container-fluid">
-      <div>
-        <div class="row">
-          <div class="col-md-5 login-area">
-            <form>
-              <h3>Hello Borrower!</h3>
-              <h4>Please enter the details to seek loan</h4>
-              <div class="form-group">
-                <div class="form-group">
-                  <p class="nav-item ml-auto">Account no.</p>
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-user"></i>
-                    </span>
-                  </div>
-
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="acc"
-                    placeholder="Account No."
-                    aria-label="Account No."
-                    aria-describedby="basic-addon1"
-                    disabled
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <p class="nav-item ml-auto">Loan Amount</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fab fa-ethereum"></i>
-                    </span>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control amount"
-                    id="loanAmount"
-                    placeholder="Loan Amount"
-                    aria-label="Loan Amount"
-                    aria-describedby="basic-addon1"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <p class="nav-item ml-auto">Due Date</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-clock"></i>
-                    </span>
-                  </div>
-                  <input
-                    type="date"
-                    class="form-control date"
-                    id="date"
-                    placeholder="Loan Amount"
-                    aria-label="Loan Amount"
-                    aria-describedby="basic-addon1"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <p class="nav-item ml-auto">Upload Mortgage</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-file"></i>
-                    </span>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="mortgage"
-                    placeholder="Mortgage Address"
-                    aria-label="Loan Amount"
-                    aria-describedby="basic-addon1"
-                    required
-                  />
-                </div>
-              </div>
-              <br />
-              <div>
-                <button id="submit" type="submit" class="button">
-                <i class="fas fa-search-dollar"></i> Submit Loan Proposal
-              </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
       <div class="col-md-12">
         <table class="table">
           <thead>
