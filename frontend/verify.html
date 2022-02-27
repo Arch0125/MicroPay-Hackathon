@@ -26,148 +26,64 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.2/web3.min.js" integrity="sha512-KURAVUCRxZKDemghhiNqTnYzVPUtO3GYznBZRWRBT2GJJ5PmePAxfO7QMGCM8xUJ0QfrUYJDrtRJM4L4NOtfow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    .headtitle{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+      }
+
+      .heading{
+        font-size: 30px;
+        color: blueviolet;
+        font-weight: 500;
+      }
+
+  </style>
+  
+  
+  
   </head>
 
   <body>
+    <section class="headtitle">
+      <h4 class="heading" >Welcome to Verification Portal</h4>
+    </section>
     <div class="container-fluid">
       <div class="d-md-flex justify-content-md-center">
         <div class="row">
-          <!-- <div class="col-md-12 bg-login">
-            <img src="" alt="" />
-            <div class="content">
-              <h1 class="brand">Hello Borrower!</h1>
-              <br />
-              <h3>Fill in the details to submit a loan proposal!</h3>
-            </div>
-          </div> -->
-
           <div class="col-md-12 login-area">
             <form>
-              <h3>Hello Lender!</h3>
-              <h4>Verify the details</h4>
+              <h4>This is the mortgage given by the borrower
+                <br/>After repayment period is over, if the loan is not repaid you can claim it's ownership
+              </h4>
               <div class="v">
               <div class="form-group">
                 <div class="form-group">
-                  <p class="nav-item ml-auto">Account no.</p>
+                  <p class="nav-item ml-auto">Mortgage Owner</p>
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">
                       <i class="fas fa-user"></i>
                     </span>
-                  </div>
-                  <input
-                  type="text"
-                  class="form-control"
-                  id="id"
-                  placeholder="Account No."
-                  aria-label="Account No."
-                  aria-describedby="basic-addon1"
-                  disabled
-                />
-                </div>
-              </div>
-              <div class="form-group">
-                <p class="nav-item ml-auto">Loan Amount</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-dollar"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <p class="nav-item ml-auto">Interest</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-percent"></i>
-                    </span>
-                  </div>
+                      </div>
+                      <input
+                      type="text"
+                      class="form-control"
+                      id="id"
+                      placeholder="Account No."
+                      aria-label="Account No."
+                      aria-describedby="basic-addon1"
+                      disabled
+                    />
                 </div>
               </div>
               </div>
-              <!-- <div class="form-group">
-                <p class="nav-item ml-auto">Upload Mortgage</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-file"></i>
-                    </span>
-                  </div>
-                  <input
-                    type="file"
-                    class="form-control"
-                    placeholder="Loan Amount"
-                    aria-label="Loan Amount"
-                    aria-describedby="basic-addon1"
-                  />
-                </div>
-              </div> -->
           </div>
         </div>
       </div>
-      <!-- <div class="col-md-12">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Borrower Address</th>
-              <th>Amount</th>
-              <th>Due Date</th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Borrower Address">
-                0x2187c0284267aB64751E49F04B817e5c5ddab9dF
-              </td>
-              <td data-label="Amount">20,000</td>
-              <td data-label="Due Date">15/12/2021</td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Give Loan</a>
-              </td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Show Details</a>
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Borrower Address">
-                0x2187c0284267aB64751E49F04B817e5c5ddab9dF
-              </td>
-              <td data-label="Amount">20,000</td>
-              <td data-label="Due Date">15/12/2021</td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Give Loan</a>
-              </td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Show Details</a>
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Borrower Address">
-                0x2187c0284267aB64751E49F04B817e5c5ddab9dF
-              </td>
-              <td data-label="Amount">20,000</td>
-              <td data-label="Due Date">15/12/2021</td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Give Loan</a>
-              </td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Show Details</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
     </div>
     <script src="index.js"></script>
     <script src="./config.js"></script>

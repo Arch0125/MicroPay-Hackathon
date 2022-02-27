@@ -36,24 +36,62 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <style>
+      .headtitle{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+      }
+
+      .heading{
+        font-size: 30px;
+        color: blueviolet;
+        font-weight: 500;
+      }
+
+      .button {
+        background: blueviolet;
+        border-radius: 999px;
+        box-shadow: #5e5df0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+          NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+          EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+          "Noto Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 15px 200px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+        margin-left: 10pt;
+        margin-right: 10pt;
+        margin-top: 10px;
+      }
+    </style>
+
   </head>
 
   <body>
+    <section class="headtitle" >
+      <h4 class="heading" >Welcome to Loan Offer Portal</h4>
+    </section>
     <div class="container-fluid">
       <div class="d-md-flex justify-content-md-center">
         <div class="row">
-          <!-- <div class="col-md-12 bg-login">
-            <img src="" alt="" />
-            <div class="content">
-              <h1 class="brand">Hello Borrower!</h1>
-              <br />
-              <h3>Fill in the details to submit a loan proposal!</h3>
-            </div>
-          </div> -->
 
           <div class="col-md-12 login-area">
             <form>
-              <h3>Hello Lender!</h3>
               <h4>Fill in the details of the loan you would like to lend</h4>
               <div class="form-group">
                 <div class="form-group">
@@ -118,89 +156,21 @@
                   />
                 </div>
               </div>
-              <!-- <div class="form-group">
-                <p class="nav-item ml-auto">Upload Mortgage</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-file"></i>
-                    </span>
-                  </div>
-                  <input
-                    type="file"
-                    class="form-control"
-                    placeholder="Loan Amount"
-                    aria-label="Loan Amount"
-                    aria-describedby="basic-addon1"
-                  />
-                </div>
-              </div> -->
               <br />
               <div >
-                <button id="submit" class="btn btn-success btn-lg btn-block">
+                <button id="submit" class="button">
                   <i class="fas fa-hand-holding-usd"></i> Give Loan
+                </button>
+              </div>
+              <div>
+                <button type="button" class="button" onclick="javascript:history.back()">
+                  <i class="fa fa-arrow-left"></i> Go Back
                 </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <!-- <div class="col-md-12">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Borrower Address</th>
-              <th>Amount</th>
-              <th>Due Date</th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Borrower Address">
-                0x2187c0284267aB64751E49F04B817e5c5ddab9dF
-              </td>
-              <td data-label="Amount">20,000</td>
-              <td data-label="Due Date">15/12/2021</td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Give Loan</a>
-              </td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Show Details</a>
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Borrower Address">
-                0x2187c0284267aB64751E49F04B817e5c5ddab9dF
-              </td>
-              <td data-label="Amount">20,000</td>
-              <td data-label="Due Date">15/12/2021</td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Give Loan</a>
-              </td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Show Details</a>
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Borrower Address">
-                0x2187c0284267aB64751E49F04B817e5c5ddab9dF
-              </td>
-              <td data-label="Amount">20,000</td>
-              <td data-label="Due Date">15/12/2021</td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Give Loan</a>
-              </td>
-              <td data-label="">
-                <a href="#" class="btn btn__active">Show Details</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
     </div>
     <script src="index.js"></script>
     <script src="config.js"></script>

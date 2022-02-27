@@ -85,56 +85,9 @@ App = {
                 />
                 </div>
               </div>
-              <div class="form-group">
-                <p class="nav-item ml-auto">Loan Amount</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                    <i class="fab fa-ethereum"></i>
-                    </span>
-                  </div>
-                  <input
-                  type="text"
-                  class="form-control"
-                  id="id"
-                  placeholder="${proposal.amount}"
-                  aria-label="Account No."
-                  aria-describedby="basic-addon1"
-                  disabled
-                />
-                </div>
-              </div>
-              <div class="form-group">
-                <p class="nav-item ml-auto">Date</p>
-              </div>
-              <div class="form-group">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-percent"></i>
-                    </span>
-                  </div>
-                  <input
-                  type="text"
-                  class="form-control"
-                  id="id"
-                  placeholder="${dueDate}"
-                  aria-label="Account No."
-                  aria-describedby="basic-addon1"
-                  disabled
-                />
-                </div>
-              </div>
               <a href="" id="url" target="myIframe"></a>
               <iframe id="pdfRenderer" width="100%" height="400px" name="myIframe"></iframe>
               <br />
-              <a href="./giveLoan.html?borrower=${proposal.proposalId}">
-              <div class="btn btn-success btn-lg btn-block" >
-                <i class="fas fa-hand-holding-usd"></i> Give Loan
-              </div>
-              </a>
             </form>
             `);
         $("#url").attr("href", pdf).click();
